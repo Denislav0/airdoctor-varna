@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirDoctor | Климатици и Подово отопление Варна</title>
+    <meta name="description" content="Професионално антибактериално почистване, монтаж на климатици и изграждане на водно подово отопление във Варна. Безкомпромисно качество от AirDoctor.">
+    <meta name="keywords" content="почистване на климатици Варна, монтаж на климатик, профилактика, демонтаж, водно подово отопление Варна, AirDoctor, ОВиК услуги">
+    <meta name="author" content="AirDoctor OOD">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Цветова палитра и променливи */
+        :root {
+            --primary: #002d58; /* Корпоративно Тъмносиньо */
+            --accent: #00aaff; /* Енергично Светлосиньо */
+            --heating: #f39c12; /* Топло Оранжево за подовото */
+            --bg-light: #f8faff; /* Много светло син фон */
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        /* Основен ресет и типография */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Навигация (Glassmorphism ефект) */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            transition: var(--transition);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+            .nav-links a {
+                font-weight: 600;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: var(--primary);
+                position: relative;
+            }
+
+                .nav-links a::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: var(--accent);
+                    transition: var(--transition);
+                }
+
+                .nav-links a:hover::after {
+                    width: 100%;
+                }
+
+        .nav-contact {
+            font-weight: 800;
+            color: var(--accent) !important;
+        }
+
+        /* Начална Секция (Hero) */
+        .hero {
+            padding: 180px 5% 120px;
+            background: linear-gradient(135deg, rgba(240,247,255,1) 0%, rgba(255,255,255,1) 100%);
+            text-align: center;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+            .hero h1 {
+                font-size: 48px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+                .hero h1 span {
+                    color: var(--accent);
+                }
+
+            .hero p {
+                font-size: 20px;
+                color: var(--text-light);
+                max-width: 800px;
+                margin: 0 auto 40px;
+            }
+
+        /* Бутони */
+        .btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0, 45, 88, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--primary);
+        }
+
+            .btn:hover {
+                background: transparent;
+                color: var(--primary);
+                transform: translateY(-3px);
+                box-shadow: 0 15px 25px rgba(0, 45, 88, 0.1);
+            }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-left: 15px;
+        }
+
+            .btn-outline:hover {
+                background: var(--primary);
+                color: var(--white);
+            }
+
+        /* Общи стилове за секциите */
+        section {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+            .section-header h2 {
+                font-size: 36px;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 15px;
+            }
+
+                .section-header h2::after {
+                    content: '';
+                    position: absolute;
+                    width: 60px;
+                    height: 4px;
+                    background: var(--accent);
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 2px;
+                }
+
+        /* Мрежа (Grid) */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Карти (Cards) */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            }
+
+            .card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background: var(--accent);
+            }
+
+            .card.heating-card::before {
+                background: var(--heating);
+            }
+
+            .card h3 {
+                font-size: 22px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .card ul {
+                list-style: none;
+                margin-bottom: 25px;
+            }
+
+                .card ul li {
+                    position: relative;
+                    padding-left: 25px;
+                    margin-bottom: 12px;
+                    color: var(--text-light);
+                }
+
+                    .card ul li::before {
+                        content: '✓';
+                        color: var(--accent);
+                        position: absolute;
+                        left: 0;
+                        font-weight: bold;
+                    }
+
+        .heating-card ul li::before {
+            color: var(--heating);
+        }
+
+        .price-tag {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-top: auto;
+            display: block;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .price-sub {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* Предимства (Why Us) */
+        .features {
+            background: var(--white);
+            padding: 60px 5%;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+            .feature-box h4 {
+                font-size: 18px;
+                margin: 15px 0 10px;
+            }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* Viber Floating Button */
+        .viber-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background: #7360f2;
+            color: #FFF;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(115, 96, 242, 0.4);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+            .viber-float:hover {
+                transform: scale(1.1);
+            }
+
+            .viber-float span {
+                font-size: 12px;
+                font-weight: 600;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .viber-float svg {
+                width: 24px;
+                height: 24px;
+                fill: white;
+                margin-bottom: 2px;
+            }
+
+        /* Футър */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-col p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+
+        /* Респонсив (Мобилен изглед) */
+        @media (max-width: 992px) {
+            .grid-2, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none; /* За мобилни е добре да се добави бургер меню по-късно, засега скриваме дългите линкове */
+            }
+
+            nav {
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+            }
+
+            .hero {
+                padding-top: 150px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="viber://chat?number=%2B359894330589" class="viber-float" target="_blank" rel="noopener">
+        <svg viewBox="0 0 512 512"><path d="M436.8 359.2c-15.6-7.3-33-12.2-51.2-14.4-15.5-1.9-30.8 1.4-44.1 9.4-10.9 6.6-20.2 15.6-27.4 26.2-1.9 2.8-5.3 4.1-8.5 3.1-26.6-8.2-54.7-22.1-80.4-39.7-28-19.1-52.6-43-71.3-70.5-2.6-3.8-1.7-9 1.9-11.9 11-8.8 19.4-20 24.6-32.9 6.2-15.3 7.3-32.2 3.1-48.2-3.6-13.8-9.8-26.8-18.4-38.3-12.7-16.9-28.7-30.8-46.7-41.2-11.2-6.5-24.1-9.9-37.3-9.9h-.3c-13.9 0-27.6 3.6-39.5 10.4-18.9 10.8-34 26.6-43.5 45.6-11.6 23.3-13.7 50.1-5.8 74.3 11 33.7 30 64.3 54.8 88.5 34.3 33.5 76.5 58.7 122.2 72.8 28.5 8.8 59 10.4 88.4 4.8 21.6-4.1 41.5-13.8 57.5-28.1 14.1-12.6 24.5-28.7 30.1-46.5 4.5-14.3 4.4-29.7-.3-44z" /></svg>
+        <span>Viber</span>
+    </a>
+
+    <nav>
+        <div class="logo-container">
+            <div class="logo-text">AirDoctor</div>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Начало</a>
+            <a href="#maintenance">Профилактика</a>
+            <a href="#installation">Климатици</a>
+            <a href="#heating">Подово отопление</a>
+            <a href="tel:+359894330589" class="nav-contact">☎ 0894 330 589</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1>Интелигентен климат за <span>Вашия Дом</span></h1>
+        <p>AirDoctor Варна предлага безкомпромисно качество в ОВиК сектора. От сертифицирано антибактериално почистване до изграждане на високоефективни отоплителни системи.</p>
+        <div>
+            <a href="tel:+359894330589" class="btn">Запази час за оглед</a>
+            <a href="#maintenance" class="btn btn-outline">Виж услугите ни</a>
+        </div>
+    </header>
+
+    <div class="features grid-3">
+        <div class="feature-box">
+            <div class="feature-icon">🛡️</div>
+            <h4>Без Прах и Бъркотия</h4>
+            <p style="font-size: 14px; color: var(--text-light);">Работим със специализирани защитни чували и индустриални прахосмукачки. Домът ви остава безупречен.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">⏱️</div>
+            <h4>Точност до Минута</h4>
+            <p style="font-size: 14px; color: var(--text-light);">Ценим вашето време. Пристигаме в уговорения час, без извинения и отлагания.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">🔬</div>
+            <h4>Сертифицирана Химия</h4>
+            <p style="font-size: 14px; color: var(--text-light);">Използваме само доказани препарати, унищожаващи 99.9% от патогените, напълно безопасни за деца.</p>
+        </div>
+    </div>
+
+    <section id="maintenance">
+        <div class="section-header">
+            <h2>Дълбока Профилактика на Климатици</h2>
+            <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light);">Мръсният климатик увеличава сметката за ток с до 20% и разпространява опасни бактерии (като Легионела). Ние не просто "мием филтри" – ние възстановяваме фабричната чистота на машината.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Етапи на работа</h3>
+                <ul>
+                    <li>Цялостно разглобяване на вътрешното тяло (пластмаси, клапи, филтри).</li>
+                    <li>Поставяне на защитен водонепропусклив чувал с дренаж.</li>
+                    <li>Нанасяне на активен химикал върху топлообменника и турбината за разграждане на органични отлагания и мухъл.</li>
+                    <li>Отмиване под високо налягане (водоструйка/парочистачка).</li>
+                    <li>Продухване на дренажната система (превенция срещу течове).</li>
+                    <li>Замерване на температурата на изходящия въздух и проверка на работното налягане на фреона.</li>
+                </ul>
+            </div>
+            <div class="card" style="display: flex; flex-direction: column;">
+                <h3>Ценова листа</h3>
+                <ul>
+                    <li><strong>Стандартна профилактика (1 бр.):</strong> Гарантирано премахване на миризми и възстановяване на въздушния поток.</li>
+                    <li><strong>Корпоративни и пакетни клиенти:</strong> При заявка за 3 или повече машини в един обект, получавате преференциална цена.</li>
+                    <li><strong>Абонаментно обслужване:</strong> За офиси, хотели и сървърни помещения.</li>
+                </ul>
+                <div class="price-tag">40€ <span class="price-sub">за 1 брой (35€ за 3+ броя; 30€ за 10+ броя)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installation" style="background: var(--white);">
+        <div class="section-header">
+            <h2>Монтаж и Демонтаж на Климатични Системи</h2>
+            <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light);">Дългият живот на един климатик зависи на 80% от правилния му монтаж. Не правете компромис с техниката си.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Професионален Монтаж</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light);">Изграждане на сплит и мулти-сплит системи с внимание към детайла и естетиката на фасадата и интериора.</p>
+                <ul>
+                    <li>Използване на дебелостенни медни тръби с висококачествена изолация.</li>
+                    <li>Прецизно нивелиране и здраво анкериране на външното тяло.</li>
+                    <li><strong>Задължително вакуумиране</strong> с двустъпална вакуум помпа за премахване на въздух и влага от системата (предпазва компресора).</li>
+                    <li>Естетично бандажиране или полагане в PVC канали на тръбния път.</li>
+                </ul>
+                <div class="price-tag">200€ <span class="price-sub">ориентировъчна цена</span></div>
+            </div>
+            <div class="card">
+                <h3>Безопасен Демонтаж</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light);">Преместване на машини при ремонт, смяна на дограма или покупка на ново жилище.</p>
+                <ul>
+                    <li>Херметично събиране на фреона във външното тяло (без загуби и нужда от презареждане).</li>
+                    <li>Изолиране на крановете и тръбите против попадане на строителен прах.</li>
+                    <li>Внимателен демонтаж на стойки и вътрешно тяло без къртене.</li>
+                </ul>
+                <div class="price-tag">75€ <span class="price-sub">на система</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="heating">
+        <div class="section-header">
+            <h2>Водно Подово Отопление</h2>
+            <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light);">Най-високият клас комфорт за вашия дом. Идеалното решение за комбиниране с термопомпа за минимални сметки за отопление.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card heating-card">
+                <h3>Проектиране и Изграждане</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light);">Цялостен инженеринг от гола плоча до работеща система.</p>
+                <ul>
+                    <li>Полагане на XPS топлоизолация и периферна (крайречна) лента за поемане на топлинните разширения.</li>
+                    <li>Монтаж на такер плочи или армировъчна мрежа.</li>
+                    <li>Професионално редене на многослойни тръби (PE-RT/AL/PE-RT) тип "охлюв" за равномерно разпределение на топлината без студени зони.</li>
+                    <li>Изграждане на разпределителни колекторни кутии с дебитомери.</li>
+                    <li><strong>Хидроизпитание (водна проба)</strong> под налягане преди заливане със замазка.</li>
+                </ul>
+            </div>
+            <div class="card heating-card" style="display: flex; flex-direction: column; justify-content: center; text-align: center; background: linear-gradient(135deg, #fff 0%, #fff9f5 100%);">
+                <div style="font-size: 50px; margin-bottom: 20px;">🔥</div>
+                <h3 style="justify-content: center;">Защо да изберете подово?</h3>
+                <p style="color: var(--text-light); margin-bottom: 15px;">Липса на радиатори (повече пространство в стаята), липса на въздушни течения (край на вдигнатия прах) и перфектен температурен профил (топли крака, хладна глава).</p>
+                <div class="price-tag" style="color: var(--heating);">По индивидуален проект</div>
+                <a href="tel:+359894330589" class="btn" style="margin-top: 20px; background: var(--heating); border-color: var(--heating);">Заявете безплатен оглед</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo-text" style="color: var(--white); margin-bottom: 15px; font-size: 28px;">AirDoctor</div>
+                <p>Вашият доверен партньор за чист въздух и топлина във Варна и региона. Дишайте чисто. Живейте здравословно. Доверете се на професионалистите!</p>
+            </div>
+            <div class="footer-col">
+                <h3>Контакти</h3>
+                <p>📞 0894 330 589</p>
+                <p>📞 0888 863 434</p>
+                <p>📧 airdoctorood@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Работно време & Район</h3>
+                <p>📍 гр. Варна (обслужваме Виница, Аспарухово, Игнатиево, Белослав, Аксаково и курортните комплекси)</p>
+                <p>⏰ Понеделник - Събота: 09:00 - 18:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AirDoctorOOD. Всички права запазени.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
